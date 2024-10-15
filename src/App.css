@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Fuggles&family=Lato:wght@100;300;700&family=Poppins:wght@200;400;500;600&family=Public+Sans:wght@100;200;400;500&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  z-index: 10001 !important;    
+  /* We put this so that when the width is reduced, the non-header part could not collapse with header part */
+}
+.section-container {
+  @apply max-w-screen-2xl container mx-auto xl:px-24 px-4;
+}
+
+.subtitle {
+  @apply text-blue uppercase tracking-wide font-bold text-2xl;
+}
+
+.title {
+  @apply text-4xl md:text-5xl font-bold my-2 md:leading-snug leading-snug ;
+}
+
+.heartStar {
+  /* used in designing border of heart in cards.js */
+  border-radius: 29px 29px 29px 29px ;
+}
+
+.filter-hover{
+  @apply hover:scale-105 transition-all duration-200
+}
+
+.active {
+  color: rgb(225, 225, 227);
+  background: blue;
+  border-radius: 5px;
+  padding: 2px 6px;
+}
+
+/* Css for removing arrow in input type number */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
