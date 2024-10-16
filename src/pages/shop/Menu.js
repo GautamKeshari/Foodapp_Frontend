@@ -14,7 +14,7 @@ const Menu = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:3001/menu");
+        const response = await fetch(`${process.env.REACT_APP_LOCALHOSTDOMAIN}/menu`);
         const data = await response.json();
         // console.log(data);  
         setMenu(data);

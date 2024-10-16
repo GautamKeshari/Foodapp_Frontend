@@ -11,6 +11,7 @@ const Cards = ({ item }) => {
 
   const navigate = useNavigate();
   const location = useLocation();
+  console.log(`${process.env.REACT_APP_LOCALHOSTDOMAIN}/carts`);
 
   const handleAddToCart = (item) => {
     console.log("add to cart clicked", item); 
@@ -24,7 +25,7 @@ const Cards = ({ item }) => {
         email: user.email,
       };
       // console.log(cartItem);
-      fetch("http://localhost:3001/carts", {
+      fetch(`${process.env.REACT_APP_LOCALHOSTDOMAIN}/carts`, {
         method: "POST",    //we have to define the post request ,because by default http has get request but here we need post request
         headers: {
           "Content-Type": "application/json",

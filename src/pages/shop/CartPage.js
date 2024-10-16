@@ -19,7 +19,7 @@ const CartPage = () => {
 
   // handle Increase function
   const handleIncrease=(item)=>{
-    fetch(`http://localhost:3001/carts/${item._id}`,
+    fetch(`${process.env.REACT_APP_LOCALHOSTDOMAIN}/carts/${item._id}`,
     {
       method:"PUT",
       headers:{
@@ -47,7 +47,7 @@ const CartPage = () => {
   // handle Decrease function
   const handleDecrease=(item)=>{
     if(item.quantity>1){
-      fetch(`http://localhost:3001/carts/${item._id}`,
+      fetch(`${process.env.REACT_APP_LOCALHOSTDOMAIN}/carts/${item._id}`,
         {
           method:"PUT",
           headers:{
@@ -87,7 +87,7 @@ const CartPage = () => {
       confirmButtonText: "Yes, delete it!"
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:3001/carts/${item._id}`,
+        fetch(`${process.env.REACT_APP_LOCALHOSTDOMAIN}/${item._id}`,
         {
           method:"DELETE"
         })

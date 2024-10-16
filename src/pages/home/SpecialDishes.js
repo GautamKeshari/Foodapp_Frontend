@@ -36,7 +36,7 @@ const SpecialDishes = () => {
   const slider = React.useRef(null);
 
   useEffect(() => {
-    fetch("http://localhost:3001/menu")
+    fetch(`${process.env.REACT_APP_LOCALHOSTDOMAIN}/menu`)
       .then((res) => res.json())
       .then((data) => {
         // 
